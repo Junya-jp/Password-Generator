@@ -18,7 +18,40 @@ function generatePassword() {
     numbers_confirm = confirm("Select 'OK' if you would like to include numbers");
     uppercase_confirm = confirm("Select 'OK' if you would like to include uppercase letters");
     lowercase_confirm = confirm("Select 'OK' if you would like to include lowercase letters");
-
+//If elseif statements corresponding to each confirm statement
+    if (symbols_confirm && numbers_confirm && uppercase_confirm && lowercase_confirm) {
+      passwordChar = special_chars += num += uppercase += lowercase;
+    }else if (lowercase_confirm && numbers_confirm && uppercase_confirm) {
+      passwordChar = lowercase += num += uppercase;
+    }else if (symbols_confirm && uppercase_confirm && lowercase_confirm) {
+      passwordChar = special_chars += uppercase += lowercase;
+    }else if (symbols_confirm && numbers_confirm && lowercase_confirm) {
+      passwordChar = special_chars += num += lowercase;
+    }else if (symbols_confirm && numbers_confirm && uppercase_confirm) {
+      passwordChar = special_chars += num += uppercase;
+    }else if (uppercase_confirm && lowercase_confirm) {
+      passwordChar = uppercase += lowercase;
+    }else if (numbers_confirm && lowercase_confirm) {
+      passwordChar = num += lowercase;
+    }else if (numbers_confirm && uppercase_confirm) {
+      passwordChar = num += uppercase;
+    }else if (symbols_confirm && lowercase_confirm) {
+      passwordChar = special_chars += lowercase;
+    }else if (symbols_confirm && uppercase_confirm) {
+      passwordChar = special_chars += uppercase;
+    }else if (symbols_confirm && numbers_confirm) {
+      passwordChar = special_chars += num;
+    }else if (lowercase_confirm) {
+      passwordChar = lowercase;
+    }else if (uppercase_confirm) {
+      passwordChar = uppercase;
+    }else if (numbers_confirm) {
+  passwordChar = num;
+    }else if (symbols_confirm) {
+  passwordChar = special_chars;
+    } else{
+      alert("No Criteria selected, please try again!")
+  }
 } else{
   alert('Try again');
 }
